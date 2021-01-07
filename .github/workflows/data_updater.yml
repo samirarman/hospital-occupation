@@ -19,6 +19,9 @@ jobs:
       run: |
         curl -X POST https://user-api-leitos:aQbLL3ZStaTr38tj@elastic-leitos.saude.gov.br/leito_ocupacao/_search?size=10000 -w "\n" > occupation.json
 
+    - name: Install pandas
+      run: pip install pandas
+      
     - name: Append to csv
       run: python script.py
 
