@@ -19,6 +19,9 @@ jobs:
       run: |
         curl -X POST https://user-api-leitos:aQbLL3ZStaTr38tj@elastic-leitos.saude.gov.br/leito_ocupacao/_search?size=10000 -w "\n" > occupation.json
 
+    - name: Install pandas
+      run: pip install pandas
+      
     - name: Append to csv
       run: python script.py
 
@@ -36,6 +39,6 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch:  'master'
+        branch:  'main'
         force:  true 
         github_token: ${{ secrets.GITHUB_TOKEN }}
