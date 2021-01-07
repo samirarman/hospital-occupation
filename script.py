@@ -3,7 +3,7 @@ import json
 import datetime
 
 # Reads the downloaded data
-json_file = open('/Users/samir/Downloads/occupation.json', 'r')
+json_file = open('occupation.json', 'r')
 lines = json_file.readlines()
 
 data = []
